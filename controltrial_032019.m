@@ -52,7 +52,7 @@ for th = 1:length(timehorz)         % sweep time horizon
                 timehorizon = strcat('step',num2str(timehorz(th))); % indexing
                 
                 % desired temperature
-                ydes = 17.5; % was 20ºC
+                ydes = 17.5; % was 20ÂºC
                 
                 % CHANGE TO INPUTS!
                 yobs0 = 17.74:-0.01:16.74; % hoping that controls work slowly observing a temperature increase
@@ -144,7 +144,7 @@ for th = 1:length(timehorz)         % sweep time horizon
                 plot(plotx', ploty'); hold on; %... [0,0, solu(1),solu(1),solu(2),solu(2),solu(3),solu(3),... solu(4),solu(4),solu(5),solu(5)]
                 plot(0:timeahead+1, [yobs(1), soly])
                 xlabel('Minutes')
-                ylabel('Temp ºC and % Open')
+                ylabel('Temp ÂºC and % Open')
                 legend('PositR (% open)','MPC-predicted roomC','Location','Northwest')
                 ax = gca;
                 ax.FontSize = 12;
@@ -186,7 +186,7 @@ for th = 1:length(timehorz)         % sweep time horizon
                 plot(0:timeahead+1, [yobs(1),roomtemp],'o');
                 plot(0:timeahead+1, [yobs(1),roomtemp_nc],'o');
                 xlabel('Minutes')
-                ylabel('Temp ºC and % Open')
+                ylabel('Temp ÂºC and % Open')
                 legend('PositR (% open)','MPC-predicted roomC','Model simulated control','Model simulated NO control','Location','Northwest')
                 ax = gca;
                 ax.FontSize = 12;
@@ -200,7 +200,4 @@ for th = 1:length(timehorz)         % sweep time horizon
 end
 
 solu
-    
-    % now we know it's a model problem
-        % wasn't including K*e(t) where e(t) is observed-predicted roomC
     
