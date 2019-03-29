@@ -1,7 +1,6 @@
 %% Consolidating model dev and prelim control scripts
 % March 13, 2019 testing with Yang Zheng that YALMIP, CVX working
-% Found that model needs to be redeveloped for more significant parameters
-% can I just test to see if more drastic A's and B's work?
+
 %% start
 close all;
 clc;
